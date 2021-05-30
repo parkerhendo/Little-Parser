@@ -1,0 +1,9 @@
+{
+  "name": "Building-a-Parser-from-Scratch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "compile": "node __tests__/run.js"
+  }
+}
