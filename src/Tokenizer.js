@@ -16,6 +16,13 @@ const Spec = [
   [/^\/\*[\s\S]*?\*\//, null],
 
   // -----------------------------------------------
+  // Symbols, delimiters:
+  
+  [/^;/, ';'],
+  [/^\{/, '{'],
+  [/^\}/, '}'],
+
+  // -----------------------------------------------
   // Numbers:
   
   [/^\d+/, 'NUMBER'],
@@ -98,6 +105,4 @@ class Tokenizer {
   }
 }
 
-module.exports = {
-  Tokenizer,
-};
+module.exports = { Tokenizer };

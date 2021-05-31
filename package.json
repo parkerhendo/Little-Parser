@@ -5,5 +5,9 @@
   "license": "MIT",
   "scripts": {
     "compile": "node __tests__/run.js"
+  },
+  "dependencies": {
+    "assert": "^2.0.0",
+    "node": "^16.1.0"
   }
 }
