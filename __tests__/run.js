@@ -10,27 +10,17 @@ const tests = [
   require('./literals.test.js'), 
   require('./statementList.test.js'),
   require('./block.test.js'),
-  require('./empty-statement.test.js')
+  require('./empty-statement.test.js'),
+  require('./math.test.js')
 ];
 
 const parser = new Parser();
 
 function exec() {
   const program = `
-    {
-      "Global-scope string";
 
-      10;
-      {
-        "Block-level string";
+    (2 + 2) * 2;
 
-        100;
-        {
-          "Another block-level string";
-          1000;
-        }
-      }
-    }
   `;
   const ast = parser.parse(program);
 

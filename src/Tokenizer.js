@@ -21,6 +21,14 @@ const Spec = [
   [/^;/, ';'],
   [/^\{/, '{'],
   [/^\}/, '}'],
+  [/^\(/, '('],
+  [/^\)/, ')'],
+
+  // -----------------------------------------------
+  // Math operators: +, -
+
+  [/^[+\-]/, 'ADDITIVE_OPERATOR'],
+  [/^[*\/]/, 'MULTIPLICATIVE_OPERATOR'],
 
   // -----------------------------------------------
   // Numbers:
@@ -75,11 +83,13 @@ class Tokenizer {
 
     for (const [regexp, tokenType] of Spec) {
       const tokenValue = this._match(regexp, string);
+      
       if (tokenValue == null) {
         continue;
       }
 
-      if (tokenType == null) {
+      if (tokenType === null) {
+        // console.log('broked', {tokenType, tokenValue})
         return this.getNextToken();
       }
 
