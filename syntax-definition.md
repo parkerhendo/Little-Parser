@@ -16,7 +16,7 @@ func printName(string) (name string) {
   return log("hello" + " " + name);
 }
 
-func getName(name[0] first, name[1] last) (name) {
+func getName(name: (String, String)) -> (name[0] first, name[1] last) {
   return ["Parker", "Henderson"];
 };
 
